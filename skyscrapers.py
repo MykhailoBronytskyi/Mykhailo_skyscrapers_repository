@@ -177,7 +177,7 @@ def check_skyscrapers(input_path: str):
     if not (check_uniqueness_in_rows(board) and check_horizontal_visibility(board)):
         return False
 
-    if not check_columns:
+    if not check_columns(board):
         return False
 
     return True
