@@ -17,6 +17,8 @@ def read_input(path: str):
 # print(read_input('check.txt'))
 
 
+
+
 def left_to_right_check(input_line: str, pivot: int):
     """
     Check row-wise visibility from left to right.
@@ -43,10 +45,11 @@ def left_to_right_check(input_line: str, pivot: int):
     if visiable == pivot:
         return True
     return False
-
 # print(left_to_right_check('*52314*', 1))
 # print(left_to_right_check("412453*", 4))
 # print(left_to_right_check("452453*", 5))
+
+
 
 
 def check_not_finished_board(board: list):
@@ -71,6 +74,8 @@ def check_not_finished_board(board: list):
     return True
 
 
+
+
 def check_uniqueness_in_rows(board: list):
     """
     Check buildings of unique height in each row.
@@ -92,6 +97,8 @@ def check_uniqueness_in_rows(board: list):
         if len(row[1:-1]) != len(set_row):
             return False
     return True
+
+
 
 
 def check_horizontal_visibility(board: list):
@@ -126,6 +133,8 @@ def check_horizontal_visibility(board: list):
     return result
 
 
+
+
 def check_columns(board: list):
     """
     Check column-wise compliance of the board for uniqueness
@@ -157,10 +166,9 @@ def check_columns(board: list):
     result = True & check_horizontal_visibility(new_board) & \
         check_uniqueness_in_rows(new_board)
     return result
-
-
 # print(check_columns((['***21**', '412453*', '423145*',
 #                       '*543215', '*35214*', '*41532*', '*2*1***'])))
+
 
 
 def check_skyscrapers(input_path: str):
@@ -181,6 +189,7 @@ def check_skyscrapers(input_path: str):
         return False
 
     return True
+
 
 
 if __name__ == "__main__":

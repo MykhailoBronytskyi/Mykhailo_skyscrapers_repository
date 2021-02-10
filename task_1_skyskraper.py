@@ -13,8 +13,6 @@ def read_file(path: str) -> list:
         for row in file:
             board.append(row.strip('\n'))
     return board
-
-
 # print(read_file('check.txt'))
 
 
@@ -38,6 +36,7 @@ def check_unfinised_board(board: list) -> bool:
     return True
 
 
+
 def check_uniqueness_in_rows(board: list) -> bool:
     """
     Check buildings of unique height in each row.
@@ -59,6 +58,7 @@ def check_uniqueness_in_rows(board: list) -> bool:
         if len(row) != len(set(row)):
             return False
     return True
+
 
 
 def left_to_right_check(row: str, pivot: int) -> bool:
@@ -89,6 +89,8 @@ def left_to_right_check(row: str, pivot: int) -> bool:
     if pivot != visiable:
         return False
     return True
+
+
 
 
 def check_horizontal_visibility(board: str) -> bool:
@@ -122,6 +124,8 @@ def check_horizontal_visibility(board: str) -> bool:
     return result
 
 
+
+
 def check_skyscrapers(path: str) -> bool:
     '''Full check of the field for on winning combination.
 
@@ -151,6 +155,7 @@ def check_skyscrapers(path: str) -> bool:
             return False
 
     return True
+
 
 
 
